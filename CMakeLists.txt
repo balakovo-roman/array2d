@@ -14,7 +14,7 @@ target_include_directories(main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/array)
 target_link_libraries(main array)
 
 set_target_properties(
-        main array tests PROPERTIES
+        main tests PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
 )

@@ -115,9 +115,9 @@ class Array2d {
   auto operator[](const std::size_t r) noexcept { return IndexProxy<Array2dIterator<T, false>>{begin() + r * C}; }
   auto operator[](const std::size_t r) const noexcept { return IndexProxy<Array2dIterator<T, true>>{begin() + r * C}; }
 
-  [[nodiscard]] bool empty() const noexcept { return C == 0 || R == 0; }
+  bool empty() const noexcept { return C == 0 && R == 0; }
 
-  [[nodiscard]] std::size_t size(const int chunk) const {
+  std::size_t size(const int chunk) const {
 	if (chunk == 1) return R;
 	if (chunk == 2) return C;
 	throw std::out_of_range("Chunk is out of range");

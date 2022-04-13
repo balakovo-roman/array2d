@@ -7,7 +7,7 @@ find_package(Threads REQUIRED)
 
 enable_testing()
 
-add_executable(tests main.cpp)
+add_executable(tests main.cpp array_tests.h)
 
 target_include_directories(tests PRIVATE ${CMAKE_SOURCE_DIR}/array ${GTEST_INCLUDE_DIRS})
 
